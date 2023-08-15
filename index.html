@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+
+    <style>
+        .boardgame{
+            width: 605px;
+            height: 80vh;
+            display: flex;
+            flex-wrap: wrap;
+            
+        }
+
+        .cell{
+            flex-basis: 0 0 33%;
+            border: 1px solid black;
+            min-width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CARO GAME</h1>
+
+    <div class="boardgame" id ="boardgame">
+        <div class="cell" id = 00 @click = "changeTurn"></div>
+        <div class="cell" id = 01 @click = "changeTurn"></div>
+        <div class="cell" id = 02 @click = "changeTurn"></div>
+        <div class="cell" id = 10 @click = "changeTurn"></div>
+        <div class="cell" id = 11 @click = "changeTurn"></div>
+        <div class="cell" id = 12 @click = "changeTurn"></div>
+        <div class="cell" id = 20 @click = "changeTurn"></div>
+        <div class="cell" id = 21 @click = "changeTurn"></div>
+        <div class="cell" id = 22 @click = "changeTurn"></div>
+
+        <p>{{ currentPlayer }}</p>
+        <p> {{ winningValue}}</p>
+    </div>
+
+    <script src = "app.js"></script>
+ 
+</body>
+</html>
